@@ -11,6 +11,12 @@
     "sourceMap": true,
     "declaration": false,
     "downlevelIteration": true,
+    "paths": {
+      "ng-glassmorphism": [
+        "dist/ng-glassmorphism/ng-glassmorphism",
+        "dist/ng-glassmorphism"
+      ]
+    },
     "experimentalDecorators": true,
     "moduleResolution": "node",
     "importHelpers": true,

@@ -1,5 +1,8 @@
 {
   "$schema": "./node_modules/@angular/cli/lib/config/schema.json",
+  "cli": {
+    "analytics": "bece1213-de48-4420-a780-de17b8627e68"
+  },
   "version": 1,
   "newProjectRoot": "projects",
   "projects": {
@@ -122,6 +125,46 @@
             "production": {
               "devServerTarget": "angular-glassmorphism:serve:production"
             }
+          }
+        }
+      }
+    },
+    "ng-glassmorphism": {
+      "projectType": "library",
+      "root": "projects/ng-glassmorphism",
+      "sourceRoot": "projects/ng-glassmorphism/src",
+      "prefix": "ngl",
+      "architect": {
+        "build": {
+          "builder": "@angular-devkit/build-angular:ng-packagr",
+          "options": {
+            "tsConfig": "projects/ng-glassmorphism/tsconfig.lib.json",
+            "project": "projects/ng-glassmorphism/ng-package.json"
+          },
+          "configurations": {
+            "production": {
+              "tsConfig": "projects/ng-glassmorphism/tsconfig.lib.prod.json"
+            }
+          }
+        },
+        "test": {
+          "builder": "@angular-devkit/build-angular:karma",
+          "options": {
+            "main": "projects/ng-glassmorphism/src/test.ts",
+            "tsConfig": "projects/ng-glassmorphism/tsconfig.spec.json",
+            "karmaConfig": "projects/ng-glassmorphism/karma.conf.js"
+          }
+        },
+        "lint": {
+          "builder": "@angular-devkit/build-angular:tslint",
+          "options": {
+            "tsConfig": [
+              "projects/ng-glassmorphism/tsconfig.lib.json",
+              "projects/ng-glassmorphism/tsconfig.spec.json"
+            ],
+            "exclude": [
+              "**/node_modules/**"
+            ]
           }
         }
       }
