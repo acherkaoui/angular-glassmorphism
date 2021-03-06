@@ -3,10 +3,10 @@
   "version": "0.0.0",
   "scripts": {
     "ng": "ng",
-    "glassmorphism": " ng lint ng-glassmorphism; ng test ng-glassmorphism; ng build ng-glassmorphism;",
+    "glassmorphism": "ng build ng-glassmorphism --prod",
+    "glassmorphism:dev": "ng build ng-glassmorphism --watch && ng serve",
     "publish": "ng build ng-glassmorphism --prod && cd dist/ng-glassmorphism && npm publish",
     "start": "ng serve",
-    "dev": "ng build ng-glassmorphism --watch",
     "build": "ng build",
     "test": "ng test",
     "lint": "ng lint",
