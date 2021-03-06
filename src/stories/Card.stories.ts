@@ -1,4 +1,3 @@
-import {CardComponent, NgGlassmorphismModule} from "ng-glassmorphism";
 import { Meta } from "@storybook/angular/types-6-0";
 import defaultConfig from './default';
 
