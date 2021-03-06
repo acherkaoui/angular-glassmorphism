@@ -3,7 +3,7 @@
   "version": "0.0.0",
   "scripts": {
     "ng": "ng",
-    "glasmorphism": " ng lint ng-glassmorphism; ng test ng-glassmorphism; ng build ng-glassmorphism;",
+    "glassmorphism": " ng lint ng-glassmorphism; ng test ng-glassmorphism; ng build ng-glassmorphism;",
     "publish": "ng build ng-glassmorphism --prod && cd dist/ng-glassmorphism && npm publish",
     "start": "ng serve",
     "dev": "ng build ng-glassmorphism --watch",
@@ -17,7 +17,6 @@
   },
   "private": true,
   "dependencies": {
-    "ng-glassmorphism": "./dist/ng-glassmorphism",
     "@angular/animations": "~11.2.3",
     "@angular/common": "~11.2.3",
     "@angular/compiler": "~11.2.3",
